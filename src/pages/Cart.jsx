@@ -24,6 +24,7 @@ import {
   makeOrder,
   usePromo,
 } from "../constants/actions";
+import { baseUrl } from "../routes";
 
 const Cart = () => {
   // redux
@@ -148,7 +149,7 @@ const Cart = () => {
     dispatch(clearOrder());
     dispatch(clearProducts());
 
-    navigate("/"); // вернуться на главную
+    navigate(baseUrl); // вернуться на главную
   };
 
   return (

@@ -7,25 +7,6 @@ const ProductSize = ({
   setActiveIndex,
   handleSize,
 }) => {
-  // const [isSelected, setIsSelected] = useState(false);
-
-  // return !isSelected ? (
-  //   <span
-  //     className="catalog-item-size"
-  //     onClick={() => setIsSelected(!isSelected)}
-  //   >
-  //     {availableSize.size}
-  //   </span>
-  // ) : (
-  //   <span
-  //     className="catalog-item-size selected"
-  //     onClick={() => setIsSelected(!isSelected)}
-  //   >
-  //     {availableSize.size}
-  //   </span>
-  // );
-  // const [isSelected, setIsSelected] = useState(false);
-
   return !isActive ? (
     <span
       className="catalog-item-size"

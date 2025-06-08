@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { changeSearchField } from "../constants/actions";
 
 import { toggleVisibility } from "../constants/actions";
+import { baseUrl } from "../routes";
 
 const NavbarSearchForm = () => {
   // redux
@@ -28,7 +29,9 @@ const NavbarSearchForm = () => {
     e.preventDefault();
     if (searchField && invisibleSearchField == false) {
       console.log("navigate to Catalog");
-      navigate("/catalog");
+      navigate(`${baseUrl}` + "catalog");
+      // navigate("/catalog");
+
     }
     // dispatch(toggleVisibility());
   };

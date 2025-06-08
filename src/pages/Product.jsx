@@ -12,6 +12,7 @@ import { AddToCart } from "../constants/actions";
 
 // заглушки
 import productsJson from "../data/products.json";
+import { baseUrl } from "../routes";
 
 const Product = () => {
   // redux
@@ -78,8 +79,8 @@ const Product = () => {
             <section className="catalog-item">
               <h2>Товар отсутствует в каталоге</h2>
               <p>
-                Вернитесь в <Link to={"/catalog"}>Каталог</Link> или на{" "}
-                <Link to={"/"}>Главную</Link> для дальнейшего выбора товара.
+                Вернитесь в <Link to={`${baseUrl}` + "catalog"}>Каталог</Link> или на{" "}
+                <Link to={baseUrl}>Главную</Link> для дальнейшего выбора товара.
               </p>
             </section>
           </Col>
@@ -200,7 +201,7 @@ const Product = () => {
                       as={Link}
                       size="lg"
                       variant="danger"
-                      to="/cart"
+                      to={`${baseUrl}` + "cart"}
                       onClick={(e) => {
                         console.log("Обновляем общий стор");
                         dispatch(AddToCart(productForOrder));

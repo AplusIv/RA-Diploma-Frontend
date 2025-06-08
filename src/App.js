@@ -21,14 +21,15 @@ import Cart from "./pages/Cart";
 import NotFound from "./pages/NotFound";
 import Product, { productLoader } from "./pages/Product";
 import Order from "./pages/Order";
+import { baseUrl } from "./routes";
 
 // loaders
 // import {productLoader} from ".pages/Product";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<RootLayout />}>
-      <Route path="/" element={<BannerLayout />}>
+    <Route path={baseUrl} element={<RootLayout />}>
+      <Route path={baseUrl} element={<BannerLayout />}>
         <Route index element={<Main />} />
         <Route path="about" element={<About />} />
         <Route path="contacts" element={<Contacts />} />

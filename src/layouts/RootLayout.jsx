@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import NavbarControlsSearchForm from "../components/NavbarControlsSearchForm";
 import headerLogoPic from "../img/header-logo.png";
+import { baseUrl } from "../routes";
 
 const RootLayout = () => {
   return (
@@ -17,7 +18,7 @@ const RootLayout = () => {
               bg="light"
               data-bs-theme="light"
             >
-              <Navbar.Brand as={Link} to="/">
+              <Navbar.Brand as={Link} to={baseUrl}>
                 <img
                 src={headerLogoPic}
                   // src="https://raw.githubusercontent.com/netology-code/ra16-diploma/refs/heads/master/html/img/header-logo.png"
@@ -30,26 +31,26 @@ const RootLayout = () => {
                   as="ul"
                   className="mr-auto"
                   style={{ maxHeight: "100px" }}
-                  defaultActiveKey="/"
+                  defaultActiveKey={baseUrl}
                   navbarScroll
                 >
                   <Nav.Item as="li">
-                    <Nav.Link as={Link} to="/" eventKey="/">
+                    <Nav.Link as={Link} to={baseUrl} eventKey={baseUrl}>
                       Главная
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item as="li">
-                    <Nav.Link as={Link} to="/catalog" eventKey="/catalog">
+                    <Nav.Link as={Link} to="catalog" eventKey="catalog">
                       Каталог
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item as="li">
-                    <Nav.Link as={Link} to="/about" eventKey="/about">
+                    <Nav.Link as={Link} to="about" eventKey="about">
                       О магазине
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item as="li">
-                    <Nav.Link as={Link} to="/contacts" eventKey="/contacts">
+                    <Nav.Link as={Link} to="contacts" eventKey="contacts">
                       Контакты
                     </Nav.Link>
                   </Nav.Item>
@@ -72,17 +73,17 @@ const RootLayout = () => {
               <h5>Информация</h5>
               <Nav as="ul" className="nav flex-column">
                 <Nav.Item as="li">
-                  <Nav.Link as={Link} to="/about">
+                  <Nav.Link as={Link} to="about">
                     О магазине
                   </Nav.Link>
                 </Nav.Item>
                 <Nav.Item as="li">
-                  <Nav.Link as={Link} to="/catalog">
+                  <Nav.Link as={Link} to="catalog">
                     Каталог
                   </Nav.Link>
                 </Nav.Item>
                 <Nav.Item as="li">
-                  <Nav.Link as={Link} to="/contacts">
+                  <Nav.Link as={Link} to="contacts">
                     Контакты
                   </Nav.Link>
                 </Nav.Item>

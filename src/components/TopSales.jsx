@@ -1,5 +1,5 @@
 import { Row } from "react-bootstrap";
-import Loader from "./Loader";
+// import Loader from "./Loader";
 import ProductCard from "./ProductCard";
 
 const TopSales = ({ products = [] }) => {

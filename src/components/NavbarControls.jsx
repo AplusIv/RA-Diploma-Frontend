@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { toggleVisibility } from "../constants/actions";
+import { baseUrl } from "../routes";
 
 const NavbarControls = () => {
   // redux
@@ -21,7 +22,7 @@ const NavbarControls = () => {
     e.preventDefault();
     if (searchField && invisibleSearchField == false) {
       console.log("navigate to Catalog");
-      navigate("/catalog");
+      navigate(`${baseUrl}` + "catalog");
     }
     dispatch(toggleVisibility());
   };
@@ -37,7 +38,7 @@ const NavbarControls = () => {
       {/* <!-- Do programmatic navigation on click to /cart.html --> */}
       <Nav.Link
         as={Link}
-        to="/cart"
+        to={`${baseUrl}` + "cart"}
         className="header-controls-pic header-controls-cart"
       >
         {/* <div className="header-controls-cart-full">4</div> */}
