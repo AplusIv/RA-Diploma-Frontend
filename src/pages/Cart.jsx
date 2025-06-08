@@ -58,6 +58,8 @@ const Cart = () => {
   };
 
   const handleSubmit = (event) => {
+    // event.preventDefault();
+
     const form = event.currentTarget;
     console.log(form.elements);
     const sumInput = document.getElementById("sum");
@@ -68,13 +70,13 @@ const Cart = () => {
       sumInput.validity.valid;
     }
 
-    sumInput.willValidate = true;
+    /* sumInput.willValidate = true;
     console.log({
       checkValidity: sumInput.checkValidity(),
       willValidate: sumInput.willValidate,
       validity: sumInput.validity,
       valid: sumInput.validity.valid,
-    });
+    }); */
 
     console.log({
       formVal: form.checkValidity(),
@@ -507,22 +509,4 @@ const mapDispatchToProps = (dispatch) => {
 
 export default connect(mapStateToProps, mapDispatchToProps)(Cart); */
 
-/* 
-POST {{url}}/api/order Content-Type: application/json
 
-{
-"owner": {
-"phone": "+7xxxxxxxxxx", "address": "Moscow City"
-}, "items": [
-
-{
-"id": 66, "price": 34000, "count": 1
-}, {
-"id": 65, "price": 7600, "count": 1
-}
-
-]
-}
-
-
-*/

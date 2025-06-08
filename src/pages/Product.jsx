@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import { AddToCart } from "../constants/actions";
 
 // заглушки
-import productsJson from "../../data/products.json";
+import productsJson from "../data/products.json";
 
 const Product = () => {
   // redux

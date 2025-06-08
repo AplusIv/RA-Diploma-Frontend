@@ -2,6 +2,7 @@ import { Col, Form, Nav, Navbar, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import NavbarControlsSearchForm from "../components/NavbarControlsSearchForm";
+import headerLogoPic from "../img/header-logo.png";
 
 const RootLayout = () => {
   return (
@@ -17,9 +18,9 @@ const RootLayout = () => {
               data-bs-theme="light"
             >
               <Navbar.Brand as={Link} to="/">
-                {/* <img src="../img/header-logo.png" alt="Bosa Noga" /> */}
                 <img
-                  src="https://raw.githubusercontent.com/netology-code/ra16-diploma/refs/heads/master/html/img/header-logo.png"
+                src={headerLogoPic}
+                  // src="https://raw.githubusercontent.com/netology-code/ra16-diploma/refs/heads/master/html/img/header-logo.png"
                   alt="Bosa Noga"
                 />
               </Navbar.Brand>
@@ -37,11 +38,6 @@ const RootLayout = () => {
                       Главная
                     </Nav.Link>
                   </Nav.Item>
-                  {/* <Nav.Item as="li">
-                    <Nav.Link className="nav-link active" href="/">
-                      Главная
-                    </Nav.Link>
-                  </Nav.Item> */}
                   <Nav.Item as="li">
                     <Nav.Link as={Link} to="/catalog" eventKey="/catalog">
                       Каталог

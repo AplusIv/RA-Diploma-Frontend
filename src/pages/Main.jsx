@@ -2,8 +2,8 @@ import { Col, Row, Button } from "react-bootstrap";
 import TopSales from "../components/TopSales";
 
 // заглушки
-import productsJson from "../../data/products.json";
-import categoriesJson from "../../data/categories.json";
+import productsJson from "../data/products.json";
+import categoriesJson from "../data/categories.json";
 //
 import Categories from "../components/Categories";
 import ProductCard from "../components/ProductCard";
@@ -120,111 +120,3 @@ const Main = () => {
 };
 
 export default Main;
-
-// server
-
-// const [topSalesData, setTopSalesData] = useState(undefined);
-// useEffect(() => {
-// console.log('TopSales loading...')
-//   async () => {
-//     try {
-//       const res = await fetch("http://localhost:7070/api/top-sales");
-//       const data = await res.json();
-//       setTopSalesData([...data]);
-// // возможно добавить дата лоадед в redux
-//     } catch (error) {
-//       console.log(error);
-// // возможно добавить data failed в redux
-//     }
-//   };
-// }, []);
-
-// const [categoriesData, setCategoriesData] = useState(undefined);
-// const [productsData, setProductsData] = useState(undefined);
-// // При смене категории делается новый запрос, предыдущие загруженные данные удаляются.
-// useEffect(() => {
-//   console.log("Categories loading...");
-//   console.log("Products by active category loading...");
-//   async () => {
-//     try {
-//       const res = await fetch("http://localhost:7070/api/categories");
-//       const data = await res.json();
-//       setCategoriesData([...data]);
-//       // возможно добавить дата лоадед в redux
-
-//       if (activeKey === "all") {
-//         const res = await fetch("http://localhost:7070/api/items");
-//         const data = await res.json();
-//         setProductsData([...data]);
-//         // возможно добавить дата лоадед в redux
-//       } else {
-//         const res = await fetch(
-//           `http://localhost:7070/api/items?categoryId=${activeKey}`
-//         );
-//         const data = await res.json();
-//         setProductsData([...data]);
-//         // возможно добавить дата лоадед в redux
-//       }
-//     } catch (error) {
-//       console.log(error);
-//       // возможно добавить data failed в redux
-//     }
-//   };
-// }, [activeKey]);
-
-// const moreCount = 6;
-
-// useEffect(() => {
-//   console.log('More Products loading...')
-//     async () => {
-//       try {
-//         if (activeKey === "all") {
-//           const res = await fetch(`http://localhost:7070/api/items?offset=${offset}`);
-//           const data = await res.json();
-//           setProductsData([...productsData, ...data]); // увеличить массив на оффсет, загрузив новые данные
-//     // возможно добавить дата лоадед в redux
-//         } else {
-//           const res = await fetch(`http://localhost:7070/api/items?categoryId=${activeKey}&offset=${offset}`);
-//           const data = await res.json();
-//           setProductsData([...productsData, ...data]); // увеличить массив на оффсет, загрузив новые данные
-//     // возможно добавить дата лоадед в redux
-//         }
-//       } catch (error) {
-//         console.log(error);
-//   // возможно добавить data failed в redux
-//       }
-// }, [page, end]);
-
-// http://localhost:7070/api/items?categoryId=X&offset=6
-
-// проверка search/searchField
-// {{url}}/api/items?q=Черный&offset=6&categoryId=13
-// useEffect(() => {
-//   //  обработка клика
-//   console.log('Searching...');
-
-//   // q
-//   searchField
-//   ? async () => {
-//     try {
-//       // category
-//       if (activeKey === "all") {
-//         const res = await fetch(`http://localhost:7070/api/items?q=${searchField}&offset=${offset}`);
-//         const data = await res.json();
-//         setProductsData([...productsData, ...data]); // увеличить массив на оффсет, загрузив новые данные
-//   // возможно добавить дата лоадед в redux
-//       } else {
-//         const res = await fetch(`http://localhost:7070/api/items?q=${searchField}&offset=${offset}&categoryId=${activeKey}`);
-//         const data = await res.json();
-//         setProductsData([...productsData, ...data]); // увеличить массив на оффсет, загрузив новые данные
-//   // возможно добавить дата лоадед в redux
-//       }
-//     } catch (error) {
-//       console.log(error);
-// // возможно добавить data failed в redux
-//     }
-//     : null;
-
-//   // offset (58)
-
-// }, [searchingStatus]);

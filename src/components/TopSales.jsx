@@ -7,14 +7,7 @@ const TopSales = ({ products = [] }) => {
     <section className="top-sales">
       <h2 className="text-center">Хиты продаж!</h2>
 
-      <Loader />
-
-      {/* <div className="preloader">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div> */}
+      {/* <Loader /> */}
 
       <Row className="g-4 d-flex">
         {products.map((product) => (

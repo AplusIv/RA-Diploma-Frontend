@@ -5,8 +5,8 @@ import { useEffect, useState } from "react";
 import { Row, Col, Card, Form, Nav, Button } from "react-bootstrap";
 
 // заглушки
-import productsJson from "../../data/products.json";
-import categoriesJson from "../../data/categories.json";
+import productsJson from "../data/products.json";
+import categoriesJson from "../data/categories.json";
 //
 import Categories from "../components/Categories";
 import ProductCard from "../components/ProductCard";
@@ -202,10 +202,6 @@ const Catalog = () => {
     <main className="container">
       <Row>
         <Col>
-          {/* <Banner
-            src="https://raw.githubusercontent.com/netology-code/ra16-diploma/refs/heads/master/html/img/banner.jpg"
-            text="К весне готовы!"
-          /> */}
           <section className="catalog">
             <h2 className="text-center">Каталог</h2>
             {/* <form className="catalog-search-form form-inline">

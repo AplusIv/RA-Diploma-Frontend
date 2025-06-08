@@ -4,7 +4,6 @@ const Banner = ({ src, text }) => {
   return (
     <Card className="banner">
       <Card.Img
-        // src="./img/banner.jpg"
         src={src}
         className="img-fluid"
         alt="К весне готовы!"
