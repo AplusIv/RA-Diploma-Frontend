@@ -10,8 +10,8 @@
 5) Корзина.
 6) Страница 404.
 
-Проект опубликован на *Github pages*, настройка всех относительных путей ведётся от     
-базового URL (**"/ra-diploma-bosa-noga"**).
+Проект опубликован на *Github pages*, настройка всех относительных путей ведётся     
+от базового URL (**"/ra-diploma-bosa-noga"**).
 
 Пути:
 1) URL — "/ra-diploma-bosa-noga/" соответствует главной странице;
@@ -31,6 +31,3 @@
 **Ссылка на Github pages**: <https://aplusiv.github.io/ra-diploma-bosa-noga/>
 
 Project status: [![Build status](https://ci.appveyor.com/api/projects/status/qqu59jpv61hhcp2k?svg=true)](https://ci.appveyor.com/project/AplusIv/ra-diploma-bosa-noga)
-
-
-Main branch status: [![Build status](https://ci.appveyor.com/api/projects/status/qqu59jpv61hhcp2k/branch/main?svg=true)](https://ci.appveyor.com/project/AplusIv/ra-diploma-frontend/branch/main)
