@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/ra-diploma-bosa-noga/static/css/main.36bed7e0.css",
+    "main.js": "/ra-diploma-bosa-noga/static/js/main.75ff6b7c.js",
+    "static/media/banner.jpg": "/ra-diploma-bosa-noga/static/media/banner.5fd2c60d58a8686daee0.jpg",
+    "index.html": "/ra-diploma-bosa-noga/index.html",
+    "main.36bed7e0.css.map": "/ra-diploma-bosa-noga/static/css/main.36bed7e0.css.map",
+    "main.75ff6b7c.js.map": "/ra-diploma-bosa-noga/static/js/main.75ff6b7c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.36bed7e0.css",
+    "static/js/main.75ff6b7c.js"
+  ]
+}
